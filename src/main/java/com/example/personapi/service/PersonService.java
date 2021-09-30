@@ -31,12 +31,6 @@ public class PersonService {
         return messageResponse;
     }
 
-    private MessageResponseDTO createMessageResponse(String s, Long id2) {
-        return MessageResponseDTO.builder()
-                .message(s + id2)
-                .build();
-    }
-
     public List<PersonDTO> listAll() {
 
         List<Person> allPeople = personRepository.findAll();
@@ -48,9 +42,24 @@ public class PersonService {
 
     public PersonDTO findById(Long id) throws PersonNotFoundException {
 
-        Person person = personRepository.findById(id).orElseThrow(() ->
-                new PersonNotFoundException(id));
-
+        Person person = verifyIfExists(id);
         return personMapper.toDTO(person);
+    }
+
+    public void delete(Long id) throws PersonNotFoundException {
+
+        verifyIfExists(id);
+        personRepository.deleteById(id);
+    }
+
+    private Person verifyIfExists(Long id) throws PersonNotFoundException {
+        return personRepository.findById(id).orElseThrow(() ->
+                new PersonNotFoundException(id));
+    }
+
+    private MessageResponseDTO createMessageResponse(String s, Long id2) {
+        return MessageResponseDTO.builder()
+                .message(s + id2)
+                .build();
     }
 }
