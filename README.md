@@ -17,3 +17,7 @@ https://peopleapi-restful-level2.herokuapp.com/
 ### Data Model
 
 ![Data model](https://github.com/jackelinenascimento/peopleapi/blob/main/images/modelo-dados.PNG)
+
+### Help Need it
+
+If you want to contribute, please submit a PR! Thanks!
