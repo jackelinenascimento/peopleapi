@@ -33,4 +33,4 @@ http://localhost:8080/api/v1/people
 
 ### Quer ajudar?
 
-Se tiver interesse em contribuir neste projeto, criando novas rotas, por favor, submeta um PR! Obrigada!
+Se tiver interesse em contribuir neste projeto, criando novas rotas ou deixa a aplicação mais robusta, por favor, submeta um PR! Obrigada!
