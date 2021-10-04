@@ -1,6 +1,6 @@
-# People API
-API REST created with Java 11 and deployed on Heroku
+<h2>Sistema de gerenciamento de pessoas em API REST com Spring Boot</h2>
 
+API REST criada com Java 11 e com deploy no Heroku.
 
 https://peopleapi-restful-level2.herokuapp.com/
 
@@ -14,10 +14,23 @@ https://peopleapi-restful-level2.herokuapp.com/
 | api/v1/people/{id}  | DELETE        | n/a            | n/a                | 200/404      |
 
 
-### Data Model
+<h3>Data Model</h3>
 
 ![Data model](https://github.com/jackelinenascimento/peopleapi/blob/main/images/modelo-dados.PNG)
 
-### Help Need it
 
-If you want to contribute, please submit a PR! Thanks!
+<h3> Para executar o projeto no terminal, faça o seu clone e então digite o seguinte comando: </h3>
+
+```shell script
+mvn spring-boot:run 
+```
+
+Após executar o comando acima, basta apenas abrir o seguinte endereço e visualizar a execução do projeto:
+
+```
+http://localhost:8080/api/v1/people
+```
+
+### Quer ajudar?
+
+Se tiver interesse em contribuir neste projeto, criando novas rotas, por favor, submeta um PR! Obrigada!
